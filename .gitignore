@@ -1,5 +1,5 @@
 bower_components
 node_modules
 _dist
-src/js/lib/ImageParticle.js
 src/js/lib/Fullpage.js
+src/js/lib/ImageParticle.js
