@@ -1,5 +1,4 @@
-import "@babel/polyfill";
-import U from "./lib/Utilities";
+import Cookie from "./lib/Cookie";
 import Loading from "./lib/Loading";
 
 document.addEventListener('DOMContentLoaded', () => {

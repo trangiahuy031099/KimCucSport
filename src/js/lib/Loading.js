@@ -20,20 +20,19 @@ module.exports = () => {
 		const progressing = () => {
 			let n = 100 / imagesLength * (counter += 1);
 			if (progress.style.width = `${n}`, progressStat.innerHTML = `${n}`, counter === imagesLength) {
-				setTimeout(() => {
-					return turnOffLoadingScreen();
-				}, 500);
+				return turnOffLoadingScreen();
 			}
 		};
-
-		if (imagesLength === 0) {
-			return turnOffLoadingScreen();
-		} else {
-			for (let i = 0; i < imagesLength; i++) {
-				let img = new Image;
-				img.onload = progressing;
-				img.onerror = progressing;
-				img.src = images[i].src
+		if (loading) {
+			if (imagesLength === 0) {
+				return turnOffLoadingScreen();
+			} else {
+				for (let i = 0; i < imagesLength; i++) {
+					let img = new Image;
+					img.onload = progressing;
+					img.onerror = progressing;
+					img.src = images[i].src
+				}
 			}
 		}
 	})
