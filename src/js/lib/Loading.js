@@ -9,6 +9,7 @@ module.exports = () => {
 
 		const turnOffLoadingScreen = () => {
 			loading.style.opacity = '0';
+			// loading.style.pointerEvents = 'none';
 			setTimeout(function() {
 				loading.style.display = 'none';
 				loading.parentNode.removeChild(loading);
@@ -18,11 +19,12 @@ module.exports = () => {
 		};
 
 		const progressing = () => {
-			let n = 100 / imagesLength * (counter += 1);
+			let n = Math.round(100 / imagesLength * (counter += 1));
 			if (progress.style.width = `${n}`, progressStat.innerHTML = `${n}`, counter === imagesLength) {
 				return turnOffLoadingScreen();
 			}
 		};
+		
 		if (loading) {
 			if (imagesLength === 0) {
 				return turnOffLoadingScreen();
