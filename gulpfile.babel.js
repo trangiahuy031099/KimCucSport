@@ -1,5 +1,6 @@
 import {
 	series,
+	parallel
 } from "gulp";
 
 // Import tasks
@@ -26,6 +27,7 @@ import {
 	cleanDist
 } from "./.tasks/clean";
 import {
+	copyFavicon,
 	copyFonts,
 	copyAssets
 } from "./.tasks/copy";
@@ -33,13 +35,20 @@ import {
 
 exports.default = series(
 	cleanDist,
-	copyFonts,
-	copyAssets,
-	jsCore,
-	cssCore,
-	cssTask,
-	jsTask,
-	jsTask2,
+	parallel(
+		copyFavicon,
+		copyFonts,
+		copyAssets,
+	),
+	parallel(
+		cssCore,
+		jsCore,
+	),
+	parallel(
+		cssTask,
+		jsTask,
+		jsTask2,
+	),
 	pugTask,
 	server,
 )
