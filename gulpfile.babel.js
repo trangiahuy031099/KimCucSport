@@ -51,4 +51,4 @@ exports.default = series(
 	),
 	pugTask,
 	server,
-)
+);

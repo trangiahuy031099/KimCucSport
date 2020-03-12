@@ -1,20 +1,20 @@
 module.exports = () => {
 	return new Promise((resolve, reject) => {
-		let loading = document.getElementById('loading-container');
-		let progressPercentage = loading.querySelector('#progress-percentage');
-		let progressBar = loading.querySelector('#progress-bar');
+		let loading = document.getElementById("loading-container");
+		let progressPercentage = loading.querySelector("#progress-percentage");
+		let progressBar = loading.querySelector("#progress-bar");
 		let images = document.images;
 		let imagesLength = images.length;
 		let counter = 0;
 
 		const turnOffLoadingScreen = () => {
 			if (loading) {
-				loading.style.opacity = '0';
+				loading.style.opacity = "0";
 				setTimeout(function() {
 					loading.parentNode.removeChild(loading);
-					document.querySelector('body').classList.add('show-page');
+					document.querySelector("body").classList.add("show-page");
 					resolve();
-				}, 1000)
+				}, 1000);
 			}
 		};
 
@@ -35,9 +35,9 @@ module.exports = () => {
 					let img = new Image;
 					img.onload = progressing;
 					img.onerror = progressing;
-					img.src = images[i].src
+					img.src = images[i].src;
 				}
 			}
 		}
-	})
+	});
 };
