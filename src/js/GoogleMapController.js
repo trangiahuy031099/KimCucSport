@@ -1,6 +1,7 @@
 let mapSelector = document.querySelector("#map");
 let dealerLocatorList = document.querySelector(".dealer-locator-list .list");
-let map, lastItemClickedIndex, locations, infoWindow, markers = [];
+let map, lastItemClickedIndex, infoWindow, markers = [];
+let locations = locationsInput || [];
 let mapOption = {
 	zoom: 12,
 	styles: [{
@@ -150,19 +151,16 @@ const getLocationList = () => {
 };
 
 const initialize = () => {
-	if (typeof(locationsInput) == "object") {
-		locations = locationsInput;
-		infoWindow = new google.maps.InfoWindow();
-		map = new google.maps.Map(mapSelector, mapOption);
-		addMarkers();
-		let listener = google.maps.event.addListener(map, "idle", () => {
-			if (map.getZoom() > 12) {
-				map.setZoom(12);
-			}
-			google.maps.event.removeListener(listener);
-		});
-		google.maps.event.addListener(map, "bounds_changed", getLocationList);
-	}
+	infoWindow = new google.maps.InfoWindow();
+	map = new google.maps.Map(mapSelector, mapOption);
+	addMarkers();
+	let listener = google.maps.event.addListener(map, "idle", () => {
+		if (map.getZoom() > 12) {
+			map.setZoom(12);
+		}
+		google.maps.event.removeListener(listener);
+	});
+	google.maps.event.addListener(map, "bounds_changed", getLocationList);
 };
 
 if (mapSelector) {
