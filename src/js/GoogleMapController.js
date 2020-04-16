@@ -1,10 +1,10 @@
-let MapDOM = document.querySelector('#map')
-let BranchListDOM = document.querySelector('.dealer-locator-list .list')
+let MapDOM = document.querySelector('#map');
+let BranchListDOM = document.querySelector('.dealer-locator-list .list');
 let map,
 	infoWindow,
-	markers = []
-let locationsInput = locationsInput || []
-let google = google || {}
+	markers = [];
+let locationsInput = locationsInput || [];
+let google = google || {};
 let mapOption = {
 	gestureHandling: 'cooperative',
 	zoom: 12,
@@ -88,80 +88,80 @@ let mapOption = {
 			],
 		},
 	],
-}
+};
 
 const addMarkers = () => {
-	markers = []
-	const bounds = new google.maps.LatLngBounds()
+	markers = [];
+	const bounds = new google.maps.LatLngBounds();
 	locationsInput.forEach((location, index) => {
-		let locationLatLng = new google.maps.LatLng(location.lat, location.lng)
+		let locationLatLng = new google.maps.LatLng(location.lat, location.lng);
 		let marker = new google.maps.Marker({
 			map: map,
 			title: location.title,
 			position: locationLatLng,
 			icon: location.icon,
-		})
-		bounds.extend(marker.position)
-		markers.push(marker)
-		showInfoMarkerOnMap(marker, index)
-	})
+		});
+		bounds.extend(marker.position);
+		markers.push(marker);
+		showInfoMarkerOnMap(marker, index);
+	});
 
-	map.fitBounds(bounds)
-}
+	map.fitBounds(bounds);
+};
 
 const showInfoMarkerOnMap = (marker, index) => {
-	google.maps.event.addListener(marker, 'click', function() {
+	google.maps.event.addListener(marker, 'click', function () {
 		infoWindow.setContent(`
 				<h3>${locationsInput[index].title}</h3>
 				<p>${locationsInput[index].address}</p>
 				<p>${locationsInput[index].phone}</p>
-			`)
-		infoWindow.open(map, marker)
-		map.panTo(marker.getPosition())
-		map.setZoom(12)
-	})
-	google.maps.event.addListener(map, 'click', function() {
-		infoWindow.close()
-	})
-}
+			`);
+		infoWindow.open(map, marker);
+		map.panTo(marker.getPosition());
+		map.setZoom(12);
+	});
+	google.maps.event.addListener(map, 'click', function () {
+		infoWindow.close();
+	});
+};
 
 const getLocationList = () => {
 	if (BranchListDOM) {
-		BranchListDOM.innerHTML = ''
+		BranchListDOM.innerHTML = '';
 		markers.forEach((marker, index) => {
-			const newMarker = document.createElement('div')
-			newMarker.classList.add('dealer-locator-item')
+			const newMarker = document.createElement('div');
+			newMarker.classList.add('dealer-locator-item');
 			newMarker.innerHTML = `
 				<h3>${locationsInput[index].title}</h3>
 				<p>${locationsInput[index].address}</p>
 				<p>${locationsInput[index].phone}</p>
-			`
-			newMarker.setAttribute('marker-id', `${index}`)
+			`;
+			newMarker.setAttribute('marker-id', `${index}`);
 			newMarker.addEventListener('click', () => {
-				const markerIndex = newMarker.getAttribute('marker-id')
-				google.maps.event.trigger(markers[markerIndex], 'click')
-			})
-			BranchListDOM.appendChild(newMarker)
-		})
+				const markerIndex = newMarker.getAttribute('marker-id');
+				google.maps.event.trigger(markers[markerIndex], 'click');
+			});
+			BranchListDOM.appendChild(newMarker);
+		});
 	}
-}
+};
 
 const initialize = () => {
-	infoWindow = new google.maps.InfoWindow()
-	map = new google.maps.Map(MapDOM, mapOption)
-	addMarkers()
+	infoWindow = new google.maps.InfoWindow();
+	map = new google.maps.Map(MapDOM, mapOption);
+	addMarkers();
 	let listener = google.maps.event.addListener(map, 'idle', () => {
 		if (map.getZoom() > 12) {
-			map.setZoom(12)
+			map.setZoom(12);
 		}
-		google.maps.event.removeListener(listener)
-	})
-	google.maps.event.addListener(map, 'bounds_changed', getLocationList)
-}
+		google.maps.event.removeListener(listener);
+	});
+	google.maps.event.addListener(map, 'bounds_changed', getLocationList);
+};
 
 if (MapDOM) {
-	google.maps.event.addDomListener(window, 'load', initialize)
+	google.maps.event.addDomListener(window, 'load', initialize);
 	if (BranchListDOM) {
-		getLocationList()
+		getLocationList();
 	}
 }

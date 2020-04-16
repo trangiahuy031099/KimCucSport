@@ -1,10 +1,10 @@
-import Cookie from './lib/Cookie'
-import Loading from './lib/Loading'
-import getSVG from './lib/GetSVG'
+import { getSVGs, Loading } from './util/utilities';
+import Cookie from './lib/Cookie';
 
 document.addEventListener('DOMContentLoaded', () => {
-	Cookie()
-	getSVG()
-	Loading()
-	console.log(123123);
-})
+	Cookie();
+	getSVGs();
+	Loading();
+});
+
+document.addEventListener('DOMContentLoaded', () => {});
