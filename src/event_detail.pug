@@ -1,0 +1,11 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Page | Introduce';
+	- let bodyClass = 'introduce-page';
+
+block banner,breadcrumb
+	include _templates/banner/banner
+block main
+	include _templates/event_detail/_event_detail
+block scripts

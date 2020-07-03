@@ -1,0 +1,59 @@
+section.product_page.container
+    .inner_product.content
+        h6.asd
+            !="<a href='index.html'>Trang Chủ</a><span> > </span> <a class='active' href='product_detail.html'>Sản Phẩm</a>"
+        .left_product
+            .card
+                .card_header
+                    h6
+                        i.fas.fa-filter  BỘ LỌC
+                .card_body
+                    h6 MỨC GIÁ
+                    .slider
+                        form
+                            div(data-role='rangeslider')
+                            label(for='range-1a') Từ:
+                            input#range-1a(type='range', name='range-1a', min='0', max='100', value='40')
+                            br
+                            label(for='range-1b') Đến:
+                            input#range-1b(type='range', name='range-1b', min='0', max='100', value='80')
+                    hr
+                    h6 THƯƠNG HIỆU  
+                    i.fas.fa-search.icon
+                    input(type="text")
+                    div.brand
+                        ul
+                            li Addidas
+                            li Addidas
+                            li.active Addidas
+                            li Addidas
+                            li Addidas
+                            li Addidas
+            .card 
+                .card_header
+                    div
+                        != "<i class='fas fa-list'></i>  DANH MỤC SẢN PHẨM"
+                .card_body
+                    ul.list
+                        li PHỤ KIỆN THỂ THAO
+                        hr
+                        li PHỤ KIỆN THỂ THAO
+                        hr
+                        li PHỤ KIỆN THỂ THAO
+                        hr
+                        li PHỤ KIỆN THỂ THAO
+                        hr
+        .right_product
+            h6 < 1 2 3 ... 8 9 10 >
+            div.clear
+            .grid_product
+                - for (var x = 0; x < 16; x++)
+                    a(href="product_detail.html")
+                        div.grid_item
+                            img(src="../../assets/img/product/giay 1.png", alt="")
+                            p Ghế massage Okasa OS-868
+                            strong 3.000.000 ₫ 
+                            .gift
+                                i.fas.fa-gift  | Quà Tặng
+div.clear
+        

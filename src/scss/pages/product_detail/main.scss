@@ -1,0 +1,238 @@
+.product_detail {
+	margin: 80px;
+	.inner_product_detail {
+		position: relative;
+		overflow: hidden;
+		h6 {
+		}
+		.product_detail_left {
+			float: left;
+			width: 48%;
+			img.main_product {
+				box-shadow: 1px 1px 1px $color4;
+				border-bottom: 2px solid $color8;
+			}
+			.slider_product_detail {
+				z-index: 1;
+				width: 100%;
+				.swiper-wrapper {
+					.swiper-slide {
+						img {
+							width: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+
+				.swiper-pagination-bullet {
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					border-radius: 100%;
+					background: #fff;
+					opacity: 0.2;
+				}
+				.swiper-pagination-bullet-active {
+					background: $color8;
+					border: 1px solid #fff;
+					opacity: 1;
+				}
+			}
+		}
+		.product_detail_right {
+			float: right;
+			width: 48%;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			height: 590px;
+			h1 {
+				font-size: 55px;
+			}
+			.brand_nane {
+				p {
+					strong {
+						color: $color8;
+					}
+				}
+			}
+			.product_desc {
+				p {
+					font-style: italic;
+					color: lighten($color: $color2, $amount: 10);
+					font-weight: 100;
+				}
+			}
+			.price {
+				position: absolute;
+				bottom: 0;
+				input[type='number'] {
+					box-shadow: 2px 2px 2px $color2;
+					border-radius: 5px;
+					width: 180px;
+					padding: 3px 20px;
+					width: 165px;
+					height: 50px;
+					border: none;
+				}
+				button {
+					background: $color8;
+					border-radius: 5px;
+					color: #fff;
+					border: none;
+					width: 165px;
+					height: 50px;
+				}
+				h4 {
+					font-size: 30px;
+					font-weight: bold;
+					font-style: italic;
+					strong {
+						font-weight: 400;
+						font-size: 45px;
+						color: $color8;
+					}
+				}
+			}
+		}
+		.product_info {
+			.info_header {
+				a {
+					display: inline-block;
+					// border-radius: 5px;
+					border: 1px solid;
+					padding: 5px 3%;
+					&:hover {
+						background: $color8;
+					}
+				}
+			}
+			.inner_product_info {
+				margin: 50px 80px;
+				h4 {
+					font-size: 25px;
+					color: $color8;
+					text-transform: uppercase;
+					padding: 10px 0;
+					font-weight: 400;
+				}
+				p {
+					padding-bottom: 20px;
+					strong.brand_info {
+						color: $color8;
+						font-weight: bold;
+					}
+				}
+				.fix_content {
+					.left_content {
+						float: left;
+						width: 48%;
+						max-height: 275px;
+						overflow-y: auto;
+						h6 {
+							color: $color8;
+							font-weight: bold;
+						}
+					}
+					.right_content {
+						max-height: 275px;
+						overflow-y: auto;
+						float: right;
+						width: 48%;
+						h6 {
+							color: $color8;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+			.product_detail_num {
+				display: none;
+				table {
+					margin: 30px 100px;
+					border-collapse: separate;
+					border-spacing: 0 15px;
+					tbody {
+						tr {
+							td {
+								padding: auto 200px;
+								text-align: center;
+								border: none;
+								&:first-child {
+									background: $color4;
+									text-align: center;
+									color: #000;
+									font-weight: bold;
+									width: 30%;
+								}
+								&:last-child {
+									background: $color3;
+									text-align: left;
+									padding: 0 50px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sptt {
+			@include inner_header;
+			.grid_product {
+				display: flex;
+				text-align: center;
+				.grid_item {
+				}
+			}
+			.slider_sptt{
+				z-index: 1;
+				width: 100%;
+				.swiper-wrapper {
+					.swiper-slide {
+						
+						background-color: $color4;
+						margin-right: 5px;
+						text-align: center;
+						padding: 10px;
+						img {
+							width: 100%;
+							object-fit: cover;
+						}
+						p {
+							text-transform: uppercase;
+						}
+						strong {
+							color: $color8;
+						}
+						.gift {
+							i {
+								color: $color9;
+								font-size: 10px;
+								width: 84px;
+								height: 20px;
+								border-radius: 50px;
+								background: $color8;
+								padding: 5px;
+							}
+						}
+					}
+				}
+
+				.swiper-pagination-bullet {
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					border-radius: 100%;
+					background: #fff;
+					opacity: 0.2;
+				}
+				.swiper-pagination-bullet-active {
+					background: $color8;
+					border: 1px solid #fff;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

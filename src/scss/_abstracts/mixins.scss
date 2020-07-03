@@ -1,0 +1,54 @@
+@mixin inner_header {
+    h6 {
+        margin-top: 50px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 30px;
+        color: $color2;
+    }
+    
+    hr {width: 135px; border: solid $color8 ; margin-bottom: 40px;}
+}
+
+@mixin icon {
+    small {
+        position: relative;
+        padding: 0 15px;
+    }
+    small + small {
+        margin-left: 5px;
+   }
+    small.clock::before {
+        content: '';
+        position: absolute;
+        background-image: url("../assets/img/icon/Group 338.svg");
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-size: 100% 100%;
+    }
+    small.view::before {
+        content: '';
+        position: absolute;
+        background-image: url("../assets/img/icon/view.svg"	);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-size: 100% 100%;
+    }
+    small.comment::before {
+        content: '';
+        position: absolute;
+        background-image: url("../assets/img/icon/comment.svg");
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-size: 100% 100%;
+    }
+}

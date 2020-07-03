@@ -10,6 +10,7 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		link(rel="stylesheet", href="./css/core.min.css")
 		link(rel="stylesheet", href="./css/main.min.css")
+		script(src="https://kit.fontawesome.com/8a9bafed2d.js" crossorigin="anonymous")
 	body
 		block loading
 		//- main content
@@ -22,11 +23,12 @@ html(lang="en")
 		block footer
 			include _footer.pug
 		//- end main content
-		#go-top
-			img.svg(src="./assets/icons/gotop.svg")
+		//- #go-top
+		//- 	img.svg(src="./assets/icons/gotop.svg")
 		//- include scripts
 		//- script(type="text/javascript", src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3')
-		script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?&libraries=places&key=AIzaSyAq6ag0zUMblc-Wk5Z5S8KWkHpT3ak1LzI")
+		//- script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?&libraries=places&key=AIzaSyAq6ag0zUMblc-Wk5Z5S8KWkHpT3ak1LzI")
 		script(type="text/javascript", src="./js/core.min.js")
 		script(type="text/javascript", src="./js/main.min.js")
+		
 		block scripts

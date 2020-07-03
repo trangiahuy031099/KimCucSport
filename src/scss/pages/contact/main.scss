@@ -1,0 +1,91 @@
+.contact_section {
+    margin: 50px auto;
+	.inner_contact {
+		@include inner_header;
+		.info_contact {
+			
+			.info_left {
+				float: left;
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                p {
+                   margin-bottom: 20px;
+					text-align: left;
+					i {
+						margin-right: 10px;
+					}
+                }
+				.left_logo {
+					float: left;
+					width: 15%;
+					padding-top: 20px;
+				}
+				.right_logo {
+					float: right;
+					width: 85%;
+					span {
+						font-size: 50px;
+						font-weight: 400;
+					}
+				}
+			}
+			.info_right {
+				float: right;
+				width: 52%;
+			}
+		}
+		.form_control {
+            text-align: center;
+            label {
+                color: $color8;
+                text-transform: uppercase;
+            }
+			form {
+				margin: 0 150px;
+				.col25 {
+					float: left;
+					width: 25%;
+					margin-top: 6px;
+				}
+				.col75 {
+					float: left;
+					width: 75%;
+					margin-top: 6px;
+				}
+				.form_group {
+					&:after {
+						content: '';
+						display: table;
+						clear: both;
+					}
+				}
+				input[type='text'],
+				input[type='number'],
+				input[type='email'],
+				textarea {
+					width: 100%;
+					padding: 12px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+                    resize: vertical;
+					background: $color3;
+					border: none;
+				}
+				textarea {
+					height: 200px;
+					
+				}
+				button {
+					width: 150px;
+					height: 50px;
+					background: $color8;
+					color: #fff;
+                    padding: 10px;
+					float: left;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  
+}
+
+body ,html {
+    width: 100%;
+    height: 100%;
+}
+.clear {
+    clear: both;
+}
+.content {
+    width: calc(100% - 240px);
+    max-width: 1465px;
+    margin-left: auto;
+    margin-right: auto;
+	padding: 0 2%;
+}
+
 @import '_abstracts/main';
 @import '_globals/main';
 @import '_layouts/main';
 
 @import 'pages/index/main';
+@import 'pages/introduce/main';
 @import 'pages/map/main';
+@import 'pages/banner/banner';
+@import 'pages/product/product';
+@import 'pages/product_detail/main';
+@import 'pages/news_event/main';
+@import 'pages/guarantee/main';
+@import 'pages/contact/main';
+@import 'pages/event_detail/main'
+
+
+
+
+
+
+
+

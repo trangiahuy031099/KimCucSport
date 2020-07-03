@@ -1,0 +1,53 @@
+section.contact_section.container
+    .inner_contact.content
+        h6 THÔNG TIN LIÊN HỆ
+        hr
+        .info_contact
+            .info_left
+                div.flex_fix
+                    .left_logo
+                        img(src="../../assets/img/contact/Group 13196.png", alt="")
+                    .right_logo
+                        span KIM CÚC SPORT
+                    div.clear
+                p
+                    != "<i class='fas fa-phone-alt active'></i> 133 - 143 Hùng Vương, t.p Quảng Ngãi"
+                p
+                    != "<i class='fas fa-phone-alt active'></i> 133 - 143 Hùng Vương, t.p Quảng Ngãi"
+                p
+                    != "<i class='fas fa-phone-alt active'></i> 133 - 143 Hùng Vương, t.p Quảng Ngãi"
+                p
+                    != "<i class='fas fa-phone-alt active'></i> 133 - 143 Hùng Vương, t.p Quảng Ngãi"
+            .info_right
+                img(src="../../assets/img/contact/Screen Shot 2020-02-29 at 14.34.40.jpg", alt="")
+            .clear
+        h6 GỬI THÔNG TIN LIÊN HỆ
+        hr
+        .form_control
+            form(method='POST' action='')
+                div.form-group
+                    .col25
+                        label(for='name') Tên đầy đủ(*)
+                    .col75
+                        input.form-control(type='text',  name='name')
+                div.form-group
+                    .col25
+                        label(for='email') Email(*):
+                    .col75
+                        input.form-control(type='email', name='email')
+                div.form-group
+                    .col25
+                        label(for='number') Số điện thoại:
+                    .col75
+                        input.form-control(type='number', name='number')
+                div.form-group
+                    .col25
+                        label(for='content') Noi dung:
+                    .col75
+                        textarea.form-control(name="", cols="30", rows="10")
+                div.form-group
+                    .col25
+                    .col75    
+                        button.btn.btn-primary(type='submit') Gửi Liên hệ
+                div.clear
+

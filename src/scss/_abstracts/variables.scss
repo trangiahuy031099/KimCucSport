@@ -1,2 +1,19 @@
-$mau: (main: rgb(7, 65, 76),
-    main-2: #b7883d);
+$mau: (
+	main: rgb(7, 65, 76),
+	main-2: #b7883d,
+);
+$color1: #fd9e6c;
+$color2: #707070;
+$color3: #fcfcfc;
+$color4: #f2f2f2;
+$color5: #f9f9f9;
+$color6: #464646;
+$color7: #000000;
+$color8: #be1622;
+$color9: #ffffff;
+.active {
+    color: $color8
+}
+.active_bg {
+    background: $color8
+}

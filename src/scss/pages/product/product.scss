@@ -1,0 +1,135 @@
+.product_page {
+	margin: 80px;
+	h6.asd {
+		margin-bottom: 50px;;
+	}
+	.inner_product {
+		position: relative;
+		h6:last-child {
+			color: $color8;
+		}
+		.left_product {
+			float: left;
+			width: 25%;
+			margin: 0;
+			padding: 0;
+			.card {
+				width: 260px;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				background-clip: border-box;
+				border: 1px solid;
+				border-radius: 0.25rem;
+				margin-top: 25px;
+                background: $color4;
+                color: $color2;
+				.card_header {
+					padding: 10px;
+					margin-bottom: 0;
+					background-color: $color8;
+					border-bottom: 1px solid;
+					box-shadow: 0 0 20px 0;
+					color: $color9;
+					font-weight: bold;
+                    h6 {
+						color: $color9;
+					}
+				}
+				.card_body {
+					flex: 1 1 auto;
+					padding: 20px;
+					
+					ul {
+						list-style: none;
+						li {
+							text-align: center;
+                            padding: 10px;
+						}
+                    }
+                    h6 {
+						color: $color8;
+						font-weight: 400;
+                    }
+					input[type='text'] {
+						border-radius: 50px;
+						background: $color8;
+					}
+					i {
+						position: absolute;
+						right: 35px;
+                        padding: 7px 15px;
+                        color: #fff
+					}
+					hr {
+						border: 2px solid #fff;
+						margin: 20px 0;
+                    }
+                    
+					.brand {
+						ul {
+							margin: 10px 4px;
+							
+							text-align: center;
+							background: $color9;
+							border-radius: 5px;
+							li {
+								margin: 10px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		.right_product {
+			float: right;
+			width: 73%;
+			h6 {
+                float: right;
+                span {
+                   
+                }
+			}
+			.grid_product {
+                
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				grid-gap: 5px;
+                text-align: center;
+                img {
+                    margin: 0;
+                    padding: 0;
+                }
+				div.grid_item {
+					
+                    background-color: $color4;
+                    padding: 15px;
+                    &:hover {
+                        background: $color9;
+                        border-bottom: 3px solid $color8;
+                        box-shadow: 2px 2px 5px $color2;
+                    }
+					p {
+						text-transform: uppercase;
+					}
+					strong {
+						color: $color8;
+					}
+					.gift {
+						i {
+							color: $color9;
+							font-size: 10px;
+							width: 84px;
+							height: 20px;
+							border-radius: 50px;
+							background: $color8;
+							padding: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

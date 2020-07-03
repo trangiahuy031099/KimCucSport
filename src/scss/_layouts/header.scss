@@ -1,0 +1,105 @@
+.backgound {
+	position: relative;
+	width: 100%;
+	z-index: 2;
+	.logo-brand {
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: 1;
+		background-image: url('../../assets/img/Path\ 4633.png');
+		width: 415px;
+		height: 264px;
+		.logo {
+			position: absolute;
+			background: url('../../assets/img/Group\ 13196.png');
+			top: 40px;
+			left: 40px;
+			z-index: 2;
+			width: 102px;
+			height: 78px;
+		}
+		p {
+			padding-top: 90px;
+			font-weight: bold;
+			color: #be1622;
+			transform: rotate(-32deg);
+		}
+	}
+	.right-home {
+		width: 100%;
+		color: #fff;
+		// float: right;
+		// margin-right: 140px;
+		position: absolute;
+
+		top: 0;
+		padding-right: 145px;
+		hr {
+			width: 1625px;
+			position: absolute;
+			top: 55px;
+			right: 0;
+			opacity: 0.5;
+		}
+		.above-nav {
+			display: flex;
+			margin: 15px 0;
+			justify-content: flex-end;
+			.social:first-child {
+				margin-right: 35px;
+				img {
+					margin-right: 15px;
+				}
+			}
+			.input-icons {
+				margin-right: 20px;
+
+				.input-field {
+					background: rgba($color: #ffffff, $alpha: 0.3);
+					border-radius: 50px;
+					border: none;
+				}
+				.icon {
+					position: absolute;
+					padding: 5px 60px 5px 0;
+					color: #fff;
+					right: 210px;
+				}
+			}
+			.cart {
+				width: 100px;
+				height: 30px;
+				background: #be1622;
+				font-size: 12px;
+				font-weight: bold;
+				padding: 5px;
+			}
+		}
+		.menu {
+			margin-top: 10px;
+			float: right;
+			ul.inner-menu {
+				list-style: none;
+				display: flex;
+				li {
+					margin-right: 60px;
+					a {
+						text-decoration: none;
+						color: #fff;
+						font-weight: bold;
+						text-transform: uppercase;
+						&:hover {
+							color: $color8;
+						}
+					}
+				}
+				li {
+					a:not(:nth-last-child(1)) {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
