@@ -10,14 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 5,
-		spaceBetween: 30,
-		pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-		},
-	  });
+
 	var swiper = new Swiper('.swiper-container_brand', {
 		spaceBetween: 30,
 		pagination: {
@@ -52,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	  });
 
-	//   var swiper = new Swiper('.slider_customer', {
-	// 	slidesPerView: 5,
-	// 	spaceBetween: 15,
-	// 	pagination: {
-	// 	  el: '.swiper-pagination',
-	// 	  clickable: true,
-	// 	},
-	//   });
+	  var swiper = new Swiper('.slider_customer', {
+		slidesPerView: 5,
+		spaceBetween: 15,
+		pagination: {
+		  el: '.swiper-pagination',
+		  clickable: true,
+		},
+	  });
 	  var swiper = new Swiper('.slider_product_detail', {
 		slidesPerView: 5,
 		spaceBetween: 5,

@@ -136,6 +136,7 @@
 					display: -ms-flexbox;
 					display: -webkit-flex;
 					display: flex;
+					flex-direction: column;
 					-webkit-box-pack: center;
 					-ms-flex-pack: center;
 					-webkit-justify-content: center;
@@ -172,9 +173,6 @@
 				}
 				.fix_font {
 					font-weight: 300;
-				}
-				p {
-					padding: 20px 0;
 				}
 				div {
 					button {
