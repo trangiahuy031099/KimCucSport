@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	Loading();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
 
+
+document.addEventListener('DOMContentLoaded', () => {
 	var swiper = new Swiper('.swiper-container_brand', {
 		spaceBetween: 30,
 		pagination: {
@@ -85,8 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		$("div.product_detail_num").css("display", "none");
 		$("div.inner_product_info").css("display", "block");
 	})
-});
+	
+	$( "#slider-range" ).slider({
+      range: true,
+      min: 1000000,
+      max: 120000000,
+      values: [ 1000000, 120000000 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+	}
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	
+	// Ajax
+	$.ajax('/api/test.json' , {
+		success: function (data, status, xhr) { 
+			$('.grid_product').append(data);
+		},
+		error: (jqXhr, textStatus, errorMessage) => {
+			console.log(errorMessage);
+			
+		}
+	})
 
+});
 
 // CHECK FORM VALID
 

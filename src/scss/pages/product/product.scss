@@ -32,7 +32,7 @@
 					border-bottom: 1px solid;
 					box-shadow: 0 0 20px 0;
 					color: $color9;
-					font-weight: bold;
+					font-weight: 400;
                     h6 {
 						color: $color9;
 					}
@@ -53,14 +53,19 @@
 						font-weight: 400;
                     }
 					input[type='text'] {
-						border-radius: 50px;
+						border-radius: 5px;
 						background: $color8;
+						padding: 0 5px;
+						border: none;
+						height: 30px;
 					}
-					i {
+					button {
 						position: absolute;
-						right: 35px;
-                        padding: 7px 15px;
-                        color: #fff
+						right: 32px;
+						color: #fff;
+						border: none;
+						padding: 3px;
+						background: none;
 					}
 					hr {
 						border: 2px solid #fff;
