@@ -1,13 +1,14 @@
 .news_event {
-	margin: 80px;
+
 	.inner_news_event {
 		@include inner_header;
 		.hot_news {
 			margin: 0;
 			float: left;
-			width: 22%;
-			min-width: 260px;
+			width: 25%;
+			
 			.card {
+				max-width: 260px;
 				width: 100%;
 				position: relative;
 				display: flex;

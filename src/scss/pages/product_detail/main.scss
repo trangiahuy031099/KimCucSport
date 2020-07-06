@@ -1,5 +1,4 @@
 .product_detail {
-	margin: 80px;
 	.inner_product_detail {
 		position: relative;
 		overflow: hidden;
@@ -14,7 +13,7 @@
 			}
 			.slider_product_detail {
 				z-index: 1;
-				width: 100%;
+				width: 100%;l
 				.swiper-wrapper {
 					.swiper-slide {
 						img {
@@ -179,12 +178,6 @@
 
 		.sptt {
 			@include inner_header;
-			.grid_product {
-				display: flex;
-				text-align: center;
-				.grid_item {
-				}
-			}
 			.slider_sptt{
 				z-index: 1;
 				width: 100%;

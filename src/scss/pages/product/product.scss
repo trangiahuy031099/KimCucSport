@@ -1,20 +1,38 @@
 .product_page {
-	margin: 80px;
 	h6.asd {
-		margin-bottom: 50px;;
+		margin-bottom: 50px;
 	}
 	.inner_product {
 		position: relative;
 		h6:last-child {
 			color: $color8;
 		}
+		ul.pagination  {
+			margin-bottom: 10px;
+			list-style: none;
+			text-align: right;
+			li {
+				display: inline-block;
+				border-radius: 5px;
+				width: 33px;
+				height: 33px;
+				border-radius: 3px;
+				 a {
+					 display: block;
+					color: #000;
+					padding-right: 10px;
+					padding-top: 5px;
+				 }
+			}
+		}
 		.left_product {
-			float: left;
 			width: 25%;
+			
 			margin: 0;
-			padding: 0;
+			float: left;
 			.card {
-				width: 260px;
+				max-width: 260px;
+				width: 100%;
 				position: relative;
 				display: flex;
 				flex-direction: column;
@@ -22,9 +40,8 @@
 				background-clip: border-box;
 				border: 1px solid;
 				border-radius: 0.25rem;
-				margin-top: 25px;
-                background: $color4;
-                color: $color2;
+				background: $color4;
+				color: $color2;
 				.card_header {
 					padding: 10px;
 					margin-bottom: 0;
@@ -32,32 +49,40 @@
 					border-bottom: 1px solid;
 					box-shadow: 0 0 20px 0;
 					color: $color9;
-					font-weight: 400;
-                    h6 {
-						color: $color9;
-					}
+					border-radius: 5px;
 				}
 				.card_body {
 					flex: 1 1 auto;
 					padding: 20px;
-					
+
 					ul {
 						list-style: none;
 						li {
 							text-align: center;
-                            padding: 10px;
+							padding: 10px;
 						}
-                    }
-                    h6 {
+					}
+					h6 {
 						color: $color8;
 						font-weight: 400;
-                    }
+					}
 					input[type='text'] {
 						border-radius: 5px;
 						background: $color8;
 						padding: 0 5px;
 						border: none;
 						height: 30px;
+					}
+					#amount[type='text'] {
+						border-radius: 5px;
+						background: none;
+						padding: 0 5px;
+						border: none;
+						height: 30px;
+						color: $color8 !important;
+					}
+					#slider-range {
+						margin: 10px 0;
 					}
 					button {
 						position: absolute;
@@ -70,12 +95,12 @@
 					hr {
 						border: 2px solid #fff;
 						margin: 20px 0;
-                    }
-                    
+					}
+
 					.brand {
 						ul {
 							margin: 10px 4px;
-							
+
 							text-align: center;
 							background: $color9;
 							border-radius: 5px;
@@ -90,31 +115,24 @@
 		.right_product {
 			float: right;
 			width: 73%;
-			h6 {
-                float: right;
-                span {
-                   
-                }
-			}
+		
 			.grid_product {
-                
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				grid-gap: 5px;
-                text-align: center;
-                img {
-                    margin: 0;
-                    padding: 0;
-                }
+				text-align: center;
+				img {
+					margin: 0;
+					padding: 0;
+				}
 				div.grid_item {
-					
-                    background-color: $color4;
-                    padding: 15px;
-                    &:hover {
-                        background: $color9;
-                        border-bottom: 3px solid $color8;
-                        box-shadow: 2px 2px 5px $color2;
-                    }
+					background-color: $color4;
+					padding: 15px;
+					&:hover {
+						background: $color9;
+						border-bottom: 3px solid $color8;
+						box-shadow: 2px 2px 5px $color2;
+					}
 					p {
 						text-transform: uppercase;
 					}
@@ -137,4 +155,31 @@
 		}
 	}
 }
-
+.ui-slider-horizontal .ui-slider-handle {
+    top: -0.3em;
+    margin-left: -.6em;
+}
+.ui-slider .ui-slider-handle {
+    -ms-touch-action: none;
+    z-index: 2;
+    position: absolute;
+    width: 1.2em;
+    height: 0.9em;
+    cursor: default;
+    touch-action: none;
+}
+.ui-slider-handle.ui-corner-all.ui-state-default {
+		background: $color8;
+		opacity: 0.8;
+}
+.ui-slider-handle:hover.ui-corner-all:hover.ui-state-default:hover {
+	background: $color8;
+	opacity: 1;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 0;
+}
+.ui-slider-horizontal {
+    height: .3em;
+}

@@ -83,9 +83,10 @@
 			ul.inner-menu {
 				list-style: none;
 				display: flex;
-				li {
-					margin-right: 60px;
+				li:not(:nth-last-child(1)) {
+					margin-right: 40px;
 					a {
+						
 						text-decoration: none;
 						color: #fff;
 						font-weight: bold;
@@ -93,11 +94,13 @@
 						&:hover {
 							color: $color8;
 						}
+						
 					}
 				}
-				li {
-					a:not(:nth-last-child(1)) {
-						margin-right: 10px;
+				
+				li.language {
+					a {
+						opacity: 0.3;
 					}
 				}
 			}

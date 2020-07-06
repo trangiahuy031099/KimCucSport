@@ -1,12 +1,12 @@
 .guarantee {
-	margin: 80px;
 	.inner_guarantee {
 		@include inner_header;
 		.guarantee_left {
 			float: left;
 			width: 25%;
-			min-height: 260px;
+		
 			.card {
+				max-width: 260px;
 				width: 100%;
 				position: relative;
 				display: flex;

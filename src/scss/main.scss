@@ -17,9 +17,11 @@ body ,html {
 .content {
     width: calc(100% - 240px);
     max-width: 1465px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 	padding: 0 2%;
+}
+.active_img {
+    opacity: 1;
 }
 
 @import '_abstracts/main';

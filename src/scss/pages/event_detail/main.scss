@@ -3,9 +3,10 @@
         @include inner_header;
         .relate_news_left {
             float: left;
-			width: 20%;
-			min-width: 260px;
+			width: 25%;
+			
             .card {
+				max-width: 260px;
 				width: 100%;
 				position: relative;
 				display: flex;

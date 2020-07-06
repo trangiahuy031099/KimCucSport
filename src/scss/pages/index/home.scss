@@ -1,5 +1,4 @@
 .label-wrapper {
-	margin-top: 80px;
 	.inner-label {
 		h6 {
 			text-align: center;
@@ -152,21 +151,12 @@
 	}
 }
 .news_home {
-	margin-bottom: 80px;
-	.inner_news.content {
+	.inner_news {
 		.right_news {
 			float: left;
 			width: 60%;
 			.inner_right_news {
-				h6 {
-					font-size: 30px;
-					font-weight: 300;
-				}
-				hr {
-					width: 135px;
-					border: solid $color8;
-					margin-bottom: 37px;
-				}
+				@include inner_header;
 				p.font_color {
 					color: $color8;
 					font-size: 22px;
@@ -193,15 +183,7 @@
 			float: right;
 			width: 38%;
 			.inner_left_news {
-				h6 {
-					font-size: 30px;
-					font-weight: 300;
-				}
-				hr {
-					width: 135px;
-					border: solid $color8;
-					margin-bottom: 37px;
-				}
+				@include inner_header;
 				.fix_color {
 					color: $color8;
 					font-size: 22px;

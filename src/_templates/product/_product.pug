@@ -1,19 +1,30 @@
 
 section.product_page.container
-    div#slider
-    .inner_product.content
+    .inner_product
         h6.asd
             !="<a href='index.html'>Trang Chủ</a><span> > </span> <a class='active' href='product_detail.html'>Sản Phẩm</a>"
+        ul.pagination
+            li.active_bg
+                a(href="") 1
+            li
+                a(href="") 1
+            li
+                a(href="") 1
+            li
+                a(href="") 1
+            li
+                a(href="") 1
+            li
+                a(href="") 1
         .left_product
             .card
                 .card_header
-                    h6
+                    div
                         i.fas.fa-filter  BỘ LỌC
                 .card_body
                     h6 MỨC GIÁ
                     #slider-range
-                    p
-                        input#amount(type='text', readonly='', style='border:0; color:#f6931f; font-weight:bold;')
+                    input#amount(type='text', readonly='', style='border:0; color:#f6931f; font-weight:bold;')
                     hr
                     h6 THƯƠNG HIỆU  
                     button
@@ -52,15 +63,14 @@ section.product_page.container
                             a(href="") PHỤ KIỆN THỂ THAO
                         hr
         .right_product
-            h6 < 1 2 3 ... 8 9 10 >
-            div.clear
             .grid_product
                 - for (var x = 0; x < 16; x++)
                     a(href="product_detail.html")
                         div.grid_item
                             img(src="../../assets/img/product/giay 1.png", alt="")
-                            p Ghế massage Okasa OS-868
-                            strong 3.000.000 ₫ 
+                            p.product_title.lcl.lcl-1 Ghế massage Okasa
+                            p.product_id OS-868
+                            strong.product_price 3.000.000 ₫ 
                             .gift
                                 i.fas.fa-gift  | Quà Tặng
 div.clear
